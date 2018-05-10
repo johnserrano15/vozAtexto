@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Voz a Texto</title>
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/browser-compatibility.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+	<style>
+		#recordButton {
+			background-color: #6c5ce7;
+			cursor: pointer;
+		}
+
+		body {
+			background: transparent;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 main-header">
+			<h1>Voz a Texto</h1>
+		</div>
+		<div class="row">
+
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="audioParent">
+						<audio style="display:none" class="audio" controls>
+							Tu navegador no soporta el elemento de audio.
+						</audio>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+
+			<div class="row">
+				<div class="col-md-6">
+					<ul class="navbar-text">
+						<li id="recordButton" class="button-row nav-inverse-color">
+							<img id="microphoneIcon" src="images/microphone.svg" class="icon">
+							<span class="nav-label">Grabar</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Tab panes -->
+			<div class="row" style="  margin: 0;">
+				<div class="col-lg-12 col-md-12 col-sm-12" style="padding: 0;">
+					<div class="well">
+						<form autocomplete="off" class="form-horizontal">
+							<div role="tabpanel">
+
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+										<a href="#home2" aria-controls="home" role="tab" data-toggle="tab">Texto</a>
+									</li>
+								</ul>
+
+								<div class="hr-tab"></div>
+
+								<fieldset>
+
+									<div class="row error-row">
+										<div class="col-lg-12">
+											<div id="errorAlert">
+												<span id="errorMessage"></span>
+												<a class="pull-right" href="#" id="errorClose">&times;</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="row notification-row">
+										<div class="col-lg-12">
+											<div id="notificationAlert">
+												<span id="notificationMessage"></span>
+												<a class="pull-right" href="#" id="notificationClose">&times;</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group row tabpanel-row">
+										<div class="col-lg-12">
+											<div class="tab-content">
+												<div role="tabpanel" class="tab-pane active" id="home2">
+													<textarea readonly id="resultsText"></textarea>
+												</div>
+											</div>
+										</div>
+										<!-- .col-lg-12 -->
+									</div>
+								</fieldset>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /.well -->
+			</div>
+			<!-- /.tabpanel -->
+
+
+			<audio class="audio-tts" style="display:none">
+				Tu navegador no soporta el elemento de audio.
+			</audio>
+
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script> (typeof $().emulateTransitionEnd == 'function') || document.write('<script src="js/bootstrap-3.3.5.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+declared-services:
+  Voz a texto-pt:
+    label: speech_to_text
+    plan: lite
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: App de Voz a texto
+  host: App-de-Voz-a-texto
+  disk_quota: 1024M
+  services:
+  - Voz a texto-pt
